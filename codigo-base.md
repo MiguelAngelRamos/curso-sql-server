@@ -17,3 +17,19 @@ CREATE TABLE Cursos (
 );
 
 ```
+
+## Insertar informacion en las tablas:
+
+```sql
+-- Insertar instructores
+INSERT INTO Instructores (Nombre, Email) VALUES
+('Juan Pérez', 'juan.perez@example.com'),
+('María López', 'maria.lopez@example.com');
+
+-- Insertar cursos
+INSERT INTO Cursos (Titulo, Descripcion, InstructorId) VALUES
+('Curso de Python', 'Aprende Python desde cero', 1),
+('Curso de PostgreSQL', 'Bases de datos con PostgreSQL', 2),
+('Curso de JavaScript', 'Desarrollo web con JavaScript', 1);
+
+```
