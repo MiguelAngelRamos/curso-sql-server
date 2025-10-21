@@ -33,3 +33,11 @@ INSERT INTO Cursos (Titulo, Descripcion, InstructorId) VALUES
 ('Curso de JavaScript', 'Desarrollo web con JavaScript', 1);
 
 ```
+
+```sql
+
+SELECT Cursos.Titulo, Cursos.Descripcion, Instructores.Nombre
+FROM Cursos 
+JOIN Instructores on Cursos.InstructorId = Instructores.Id;
+
+```
