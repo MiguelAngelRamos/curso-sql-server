@@ -14,7 +14,8 @@ BEGIN
     
     RETURN ISNULL(@Stock, 0);
 END
-
+-- Llamar a la función 
+-- SELECT Inventario.fn_ObtenerStock(1) AS StockActual;
 ```
 
 
@@ -38,4 +39,7 @@ RETURN
     FROM Inventario.Producto
     WHERE CategoriaID = @CategoriaID
 );
+
+-- Llamar a la función 
+-- SELECT * FROM Inventario.fn_ProductosPorCategoria(1);
 ```
