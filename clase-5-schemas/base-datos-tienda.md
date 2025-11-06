@@ -13,8 +13,9 @@ USE Tienda;
 ```sql
 -- CREAR ESQUEMAS
 CREATE SCHEMA Inventario AUTHORIZATION dbo;
+GO
 CREATE SCHEMA Ventas AUTHORIZATION dbo;
-
+GO
 ```
 
 ## Creación de las tablas
