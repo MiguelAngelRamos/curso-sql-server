@@ -77,3 +77,23 @@ END
 GO
 
 ```
+
+## LLAMAR EL PROCEDIMIENTO
+
+```SQL
+-- Declarar variable para recibir el ID de la venta
+DECLARE @VentaID INT;
+
+-- Ejecutar el procedimiento
+EXEC Ventas.sp_VenderProducto 
+    @ProductoID = 1,        -- ID del producto a vender
+    @Cantidad = 5,          -- Cantidad a vender
+    @VentaID = @VentaID OUTPUT;  -- Variable que recibirá el ID de la venta
+
+-- Usar el ID de la venta
+PRINT 'ID de la venta generada: ' + CAST(@VentaID AS NVARCHAR);
+
+-- Consultar la venta creada
+SELECT * FROM Ventas.Venta WHERE VentaID = @VentaID;
+SELECT * FROM Ventas.DetalleVenta WHERE VentaID = @VentaID;
+```
